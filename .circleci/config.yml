@@ -1,14 +1,7 @@
-version: 2
+version: 2.1
 orbs:
-  node: circleci/node@4.5.1
-jobs:
-  example-job:
-    docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - node/install
+  node: circleci/node@3.0.0
 workflows:
-  example-workflow:
+  node-tests:
     jobs:
-      - example-job
+      - node/test
